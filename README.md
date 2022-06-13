@@ -159,22 +159,16 @@ root.mainloop() # we launch the display loop (it's like executing a script)
 ```
 
 ⚠️ Warning : the “root.mainloop()” is always at the end of code, is exec the script of action of code above
-
-Now we have a window, it’s cool but we want more
-
 the next step is print a text in this window:
 
-the next step is create a button with action,  and 
+```python
+ttk.Label(root, text="Hello World!").grid(column=0, row=0)
+```
 
-#
-# Un cadre dans Tk vous permet d'organiser et de regrouper les widgets. Il fonctionne comme un conteneur. C'est une zone rectangulaire dans laquelle les wigs peuvent être placés.
+the next step is create a button with action,  and
 
-frm = ttk.Frame(root, padding=10) 
-frm.grid()
-ttk.Label(frm, text="Hello World!").grid(column=0, row=0)
-ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=0)
-root.mainloop()
+```python
+ttk.Button(root, text="Quit", command=root.destroy).grid(column=5, row=2)
+```
 
-Rewrite decorator_to_str to force the functions "add" and "get_info" to return string values
-
-Create a metaclass that checks if classes have an attribute named 'process' which must be a method taking 3 arguments
+For the rest of the code, you can use the same code as before and you can dev other, use your creativity
